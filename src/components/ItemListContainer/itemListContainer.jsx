@@ -1,12 +1,11 @@
+import React from 'react'
 
-function ItemListContainer() {
+const itemListContainer = ({greeting}) => {
   return (
     <div>
-        <p>
-            PRÓXIMAMENTE LISTA DE PRODUCTOS
-        </p>
+          <h1>{greeting}</h1>
     </div>
-  )
+  );
 }
 
-export default ItemListContainer
+export default itemListContainer

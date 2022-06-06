@@ -1,8 +1,11 @@
-import './nav.css'
+import './Nav.css'
 import logo from './logocm.png'
 import instagram from './instagram.png'
 import wspp from './wspp.png'
-export default function nav(){
+import CartWidget from './CartWidget'
+
+
+export default function Nav(){
     return (
         <>
   <nav id="nav" className="nav_inline">   
@@ -26,7 +29,8 @@ export default function nav(){
         <li><a className="menu_item" href="html/contacto.html">CONTACTO</a></li> 
             
         <div><a href="#"><img src={instagram} alt="instagram" style={{height:30, width:30}}/></a></div>   
-        <div><a href="#"><img src={wspp} alt="whatsapp" style={{height:30, width:30}}/></a></div>    
+        <div><a href="#"><img src={wspp} alt="whatsapp" style={{height:30, width:30}}/></a></div>
+        <CartWidget />    
             
     </ul>
 </nav>
