@@ -3,7 +3,7 @@ import ItemCount from '../ItemCount/ItemCount';
 
 const ItemListContainer = () => {
   return (
-          <ItemCount /> 
+          <ItemCount stock={5} initial={1}/> 
   );
 }
 

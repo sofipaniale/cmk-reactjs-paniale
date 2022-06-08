@@ -56,3 +56,19 @@
     display: inline;
     float: left;
 }
+.product-container div {
+  border: 1px black
+}
+
+.product-img div {
+  border: 1px black
+}
+
+.counter div{
+  display: flex;
+  align-content: space-around;
+}
+
+button{
+  border: 0.5px black;
+}
