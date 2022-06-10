@@ -1,16 +1,3 @@
-.product-container div {
-    border: 1px black
-}
-
-.product-img div {
-    border: 1px black
-}
-
-.counter div{
-    display: flex;
-    flex-direction: row;
-}
-
-button{
-    border: 0.5px black;
+.card-body div{
+    width: 150px;
 }

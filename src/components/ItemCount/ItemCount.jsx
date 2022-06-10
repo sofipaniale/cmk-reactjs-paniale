@@ -1,6 +1,8 @@
+import './itemCount.css'
 import React from 'react';
 import { useState } from 'react';
-import './ItemCount.css';
+import ItemList from '../ItemList/ItemList';
+
 
 const ItemCount = ({stock, initial}) => {
   const [count, setCount] = useState(1);
@@ -15,22 +17,16 @@ const ItemCount = ({stock, initial}) => {
 
   return (
       <>
-      <div className='product-container'>
-
-      <div className='product-img' height={200} width={200}>
-          <p>producto</p>
-      </div> 
-
-      <div className='counter'>
-        <button onClick={restItem}>-</button>
+      <div className="card">
+        <div className="card-body">
+          <ItemList />
+          <div className="counter d-flex justify-content-center align-items-center" >
+        <button className="btn btn-secondary" onClick={restItem}>-</button>
           <p>{count}</p>
-        <button onClick={addItem}>+</button>
+        <button  className="btn btn-secondary" onClick={addItem}>+</button>
+          </div>
+        </div>
       </div>
-
-      </div>
-
-
-
       </>
 
   );
