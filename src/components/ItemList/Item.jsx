@@ -1,10 +1,11 @@
-const Item = ({title, image, price}) => {
+const Item = ({producto}) => {
+    const  {title, image, price, stock, initial} = producto
     return (
         <>
             <a href="#" className="col-6 col-md-2 my-3 item">
-                <img src={image} alt="" className="img-fluid"/>
-                <h2 className="mt-2">{title}</h2>
-                <p>${price}</p>
+                <img src={producto.image} alt="" className="img-fluid"/>
+                <h2 className="mt-2">{producto.title}</h2>
+                <p>${producto.price}</p>
             </a>
         </>
     );

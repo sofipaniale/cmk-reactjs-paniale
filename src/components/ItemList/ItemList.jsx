@@ -1,5 +1,5 @@
 import Item from "./Item";
-import { productos } from "../../productos/productos";
+
 
 const ItemList = ({productos}) => {
     return (
@@ -9,9 +9,7 @@ const ItemList = ({productos}) => {
                     productos.map((producto) => {
                         return (
                             <Item 
-                                title={producto.title} 
-                                image={producto.image}
-                                price={producto.price}
+                                producto={producto}
                             />
                         )
                     })

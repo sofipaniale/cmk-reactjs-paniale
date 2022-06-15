@@ -1,9 +1,12 @@
 import React from 'react'
-import ItemCount from '../ItemCount/ItemCount';
 import {productos} from '../../productos/productos';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import ItemList from '../ItemList/ItemList'
 
 const ItemListContainer = () => {
+const [listaProductos,setListaProductos] = useState([])
+
+
   useEffect(() => {
     const listar = () => {
         return new Promise ((resolve) => {
@@ -14,11 +17,11 @@ const ItemListContainer = () => {
     };
     listar()
     .then((resp) => {
-         console.log('error');
+         setListaProductos(resp);
     })
 }, [])
   return (
-          <ItemCount stock={5} initial={1}/> 
+          <ItemList productos={listaProductos}/> 
   );
 }
 
